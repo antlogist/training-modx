@@ -43,6 +43,8 @@ RUN docker-php-ext-install \
     exif \
     fileinfo
 
+RUN a2enmod rewrite
+
 RUN docker-php-ext-configure intl
 RUN docker-php-ext-install intl
 
