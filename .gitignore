@@ -1,1 +1,8 @@
 db
+src/core/*
+!src/core/components
+src/assets
+src/connectors
+src/manager
+src/.htaccess
+src/index.php
