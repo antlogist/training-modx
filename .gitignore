@@ -9,4 +9,5 @@ app/config.core.php
 app/.htaccess
 app/ht.access
 node_modules
+mix-manifest.json
 package-lock.json
