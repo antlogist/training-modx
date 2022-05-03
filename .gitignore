@@ -1,8 +1,10 @@
 db
-src/core/*
-!src/core/components
-src/assets
-src/connectors
-src/manager
-src/.htaccess
-src/index.php
+app/core/*
+!app/core/components
+app/assets
+app/connectors
+app/manager
+app/.htaccess
+app/index.php
+node_modules
+package-lock.json
