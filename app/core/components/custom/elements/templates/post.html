@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+        [[$meta]]
+    <body>
+        [[$header]]
+        <div class="container py-5">
+            <h1>[[*pagetitle]]</h1>
+            <small>[[*publishedon:strtotime:date=`%d/%m/%Y`]]</small>
+
+            <div class="row">
+
+                <!--Content Col-->
+                <div class="col-md-8">
+
+                    <!--Image-->
+                    <div class="image-wrapper">
+                        [[*image:!empty=`
+                                <img src="[[*image]]" class="img-fluid" alt="[[*pagetitle:htmlent]]">
+                        `]]
+                    </div>
+                    <!--/Image-->
+
+                    <!--Content-->
+                    <div class="content-wrapper py-1">
+                       [[*content]]
+                    </div>
+                    <!--/Content-->
+
+                </div>
+                <!--/Content Col-->
+
+                <!--Sidebar-->
+                <div class="col-md-4">
+                    [[$sidebar]]
+                </div>
+                <!--/Sidebar-->
+
+            </div>
+        </div>
+        [[$footer]]
+        [[$scripts]]
+    </body>
+</html>
