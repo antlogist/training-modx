@@ -14,21 +14,27 @@ foreach($resources as $key => $value) {
 
     $wrapper = renderWrapper();
     $imageUrl = $value->getTVValue('image');
+    $publishedon = $value->publishedon;
 
     echo $wrapper['start'];
 
     renderImage($imageUrl, $value->pagetitle);
 
     renderTitle($value->pagetitle);
+    renderDate($publishedon);
     renderIntro($value->introtext);
     renderReadMore($value->uri, 'Читать');
 
     echo $wrapper['end'];
 }
 
+function renderDate($date) {
+    echo  '<small>' . date('d/m/Y', $date) . '</small>';
+}
+
 function renderWrapper() {
     return array(
-        'start'  => '<div class="my-3">',
+        'start'  => '<div class="my-5">',
         'end'    => '</div>'
     );
 }
@@ -42,11 +48,11 @@ function renderImage($url, $alt) {
 }
 
 function renderTitle($title) {
-    echo '<h2>'. $title .'</h2>';
+    echo '<h2 class="mb-0 pb-0">'. $title .'</h2>';
 }
 
 function renderIntro($intro) {
-    echo '<div class="mb-3">' . $intro . '</div>';
+    echo '<div class="mt-1 mb-3">' . $intro . '</div>';
 }
 
 function renderReadMore($link = '#', $text = 'Читать') {
