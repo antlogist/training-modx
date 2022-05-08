@@ -9,7 +9,7 @@
 # to your rule: RewriteRule ^(.*)$ index.php?q=$1 [L,QSA,NC]
 
 RewriteEngine On
-RewriteBase /src
+RewriteBase /app
 
 
 # Prevent rewrite the .well-known directory used by LetsEncrypt by rules below of this rule
