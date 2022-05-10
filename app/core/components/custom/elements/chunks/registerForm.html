@@ -1,31 +1,29 @@
 <form id="form" action="" method="post">
 
+    [[!createUser]]
+
     <!--Email-->
     <div class="mb-3">
       <label for="email" class="form-label">Email*</label>
-      <input type="email" class="form-control" name="email" id="email" aria-describedby="validation-email" required value="">
-      <div id="validation-email" class="invalid-feedback"></div>
+      <input type="email" class="form-control" name="email" id="email" required value="">
     </div>
 
     <!--Password-->
     <div class="mb-3">
       <label for="password" class="form-label">Пароль*</label>
-      <input type="password" class="form-control" name="password" id="password" aria-describedby="validation-password" required value="">
-      <div id="validation-password" class="invalid-feedback"></div>
+      <input type="password" class="form-control" name="password" id="password" required value="">
     </div>
 
     <!--Password again-->
     <div class="mb-3">
       <label for="password" class="form-label">Введите пароль ещё раз*</label>
-      <input type="password" class="form-control" name="confirmpassword" id="confirmpassword" aria-describedby="validation-confirmpassword" required value="">
-      <div id="validation-confirmpassword" class="invalid-feedback"></div>
+      <input type="password" class="form-control" name="confirmpassword" id="confirmpassword" required value="">
     </div>
 
-    <!--Nickname-->
+    <!--Username-->
     <div class="mb-3">
-      <label for="nickname" class="form-label">Ваше имя или псевдоним</label>
-      <input type="text" class="form-control" name="nickname" id="fullname" aria-describedby="validation-nickname" required value="">
-      <div id="validation-nickname" class="invalid-feedback"></div>
+      <label for="username" class="form-label">Ваше имя или псевдоним*</label>
+      <input type="text" class="form-control" name="username" id="fullname" required value="">
     </div>
     
     <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
