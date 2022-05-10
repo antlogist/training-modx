@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Get URL
+ * Get home URL
  *
  * @param boolean $location
  * @return void
