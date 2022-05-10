@@ -7,7 +7,7 @@
  * @return void
  */
 
-function getWebsiteUrl($location = false) {
+function getWebsiteUrl(Bool $location = false) {
     if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
     $link = "https";
     else $link = "http";
