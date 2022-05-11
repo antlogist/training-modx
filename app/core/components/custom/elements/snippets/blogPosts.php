@@ -42,7 +42,7 @@ foreach ($resources as $key => $value) {
         'introtext'     => $value->introtext,
         'pageLink'      => $value->uri
     ));
-    
+
     echo $output;
 }
 
@@ -50,17 +50,19 @@ foreach ($resources as $key => $value) {
 $pages = ceil($totalPosts / $postsPerPage);
 if ($pages > 1) {
     for ($i = 1; $i <= $pages; $i++) {
-        renderPagination($i, $currentPage);
-    }
-}
+        $styleClass = '';
+        if ($currentPage === $i - 1) {
+            $styleClass = 'btn-warning';
+        } else {
+            $styleClass = 'btn-outline-dark';
+        }
 
-// Pagination rendering
-function renderPagination($number, $currentPage)
-{
+        $output = $modx->getChunk('pagination', array(
+            'link'   => "/blog/?p=$i",
+            'number' => $i,
+            'styleClass' => $styleClass
+        ));
 
-    if ($currentPage === $number - 1) {
-        echo '<a href="/blog/?p=' . $number . '" class="d-inline-block btn btn-warning mx-1">' . $number . '</a>';
-    } else {
-        echo '<a href="/blog/?p=' . $number . '" class="d-inline-block btn btn-outline-dark mx-1">' . $number . '</a>';
+        echo $output;
     }
 }
