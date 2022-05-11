@@ -32,7 +32,6 @@ $resources = $modx->getCollection('modResource', $posts);
 
 // Main loop
 foreach ($resources as $key => $value) {
-    $wrapper = renderWrapper();
     $imageUrl = $value->getTVValue('image');
     $publishedon = $value->publishedon;
 
@@ -41,9 +40,9 @@ foreach ($resources as $key => $value) {
         'imageUrl'      => $imageUrl,
         'publishedon'   => date('d/m/Y', $publishedon),
         'introtext'     => $value->introtext,
-        'pageLink'           => $value->uri
+        'pageLink'      => $value->uri
     ));
-
+    
     echo $output;
 }
 
